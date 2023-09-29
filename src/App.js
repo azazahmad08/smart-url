@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-
+import InputShortener from './InputShortner';
+import LinkResult from './LinkResult';
 function App() {
+  const [inputValue, setInputValue] = useState("");
   return (
     <div className="App">
       <header className="header">
@@ -17,9 +19,11 @@ function App() {
       </ul>
         </nav>
       </header>
-      <main className="content">
-        
-      </main>
+      <div className="content">
+         <InputShortener setInputValue={setInputValue}/>
+         <LinkResult inputValue={inputValue} />
+         
+      </div> 
     </div>
   );
 }
