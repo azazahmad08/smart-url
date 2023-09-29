@@ -19,11 +19,11 @@ function App() {
       </ul>
         </nav>
       </header>
-      <div className="content">
-         <InputShortener setInputValue={setInputValue}/>
-         <LinkResult inputValue={inputValue} />
-         
-      </div> 
+      <div className="container">
+      <InputShortener setInputValue={setInputValue} />
+      
+      <LinkResult inputValue={inputValue} />
+    </div>
     </div>
   );
 }
